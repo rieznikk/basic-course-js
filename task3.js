@@ -1,16 +1,22 @@
-'use strict';
+'use strict'
 
-let a = -100;
-let b = 50;
-let c;
+const products = [
+    {
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
+];
 
-if (a >= 0 && b >= 0 ){
-    c = a - b;
-    console.log(c);
-} else if (0 > a && 0 > b) {
-    c = a * b;
-    console.log(c);
-} else {
-    c = a + b;
-    console.log(c);
-}
+
+
+products.forEach(discount => {
+    discount.price = discount.price - discount.price * 0.15;
+});

@@ -1,45 +1,34 @@
-'use strict';
+'use strict'
 
-/**
- * Функция складывания.
- * @param {number} a - Первое число. 
- * @param {number} b - Второе число.
- * @returns {number}
- */
-function plus (a, b) {
-    return a + b;
-}
-plus(10, 5);
+const products = [
+    {
+        id: 3,
+        price: 127,
+        photos: [
+            "1.jpg",
+            "2.jpg",]
+    },
+    {
+        id: 5,
+        price: 499,
+        photos: []
+    },
+    {
+        id: 10,
+        price: 26,
+        photos: [
+            "3.jpg"
+        ]
+    }, {
+        id: 8,
+        price: 78,
+    },
+];
 
-/**
- * Функция отнимания.
- * @param {number} a - Первое число. 
- * @param {number} minusB - Второе число.
- * @returns {number}
- */
-function minus (a, minusB) {
-    return a - b;
-}
-minus(15, 20);
+let productsPhoto = products.filter(products => "photos" in products && products.photos.length > 0);
+console.log (productsPhoto);
+let lowerPriceToHight = products.sort(function(a, b) {
+    return a.price - b.price;
+});
 
-/**
- * Функция умножения.
- * @param {number} a - Первое число. 
- * @param {number} b - Второе число.
- * @returns {number}
- */
-function multiply (a, b) {
-    return a * b;
-}
-multiply(50, 21);
-
-/**
- * Функция деления.
- * @param {number} a - Первое число. 
- * @param {number} b - Второе число.
- * @returns {number}
- */
-function divide (a, b) {
-    return a / b;
-}
-divide(5, 0);
+console.log (lowerPriceToHight);
