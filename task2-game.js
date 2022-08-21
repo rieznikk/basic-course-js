@@ -17,11 +17,11 @@ let game = {
             }
             // Получаем следующую точку пользователя в зависимости от направления.
             const nextPoint = mover.getNextPosition(direction);
-            
-            renderer.clear();
-            player.move(nextPoint);
-            renderer.render();
-           
+            if (mover.canPlayerMakeStep(nextPoint)) {
+                renderer.clear();
+                player.move(nextPoint);
+                renderer.render();
+            }
         }
     },
 
