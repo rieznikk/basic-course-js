@@ -19,7 +19,14 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        let bEl = document.querySelectorAll('b');
+        bEl.forEach(function(element){
+            if (!element.classList.contains('sign')){
+                element.classList.add('sign');
+            }
+        });
     </script>
 </body>
 </html>
