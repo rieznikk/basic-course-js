@@ -26,7 +26,17 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        const btn = document.querySelector('button');
+        const divEl = document.querySelector('div');
+        const audioVk = new Audio('notification.mp3');
+
+        btn.addEventListener('click', function(event){
+            let messageHeight = divEl.clientHeight;
+            divEl.style.transform = `translateY(-${40 + messageHeight}px)`;
+            audioVk.play();
+        });
     </script>
 </body>
 
