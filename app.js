@@ -3,6 +3,8 @@
 let fitlerPopup = document.querySelector('.filterPopup');
 let fitlerLabel = document.querySelector('.filterLabel');
 let filterIcon = document.querySelector('.filterIcon');
+let cartIconWrap = document.querySelector('.cartIconWrap');
+let shoppingCart = document.querySelector('.shopping-cart__div');
 
 fitlerLabel.addEventListener('click', function() {
     fitlerPopup.classList.toggle('hidden');
@@ -27,4 +29,8 @@ let filterSizes = document.querySelector('.filterSizes');
 let filterSizeWrap = document.querySelector('.filterSizeWrap');
 filterSizeWrap.addEventListener('click', function() {
     filterSizes.classList.toggle('hidden');
+});
+
+cartIconWrap.addEventListener('click', function(){
+    shoppingCart.classList.toggle('hidden');
 });
