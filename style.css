@@ -709,29 +709,3 @@ body {
         margin-top: 40px;
     }
 }
-
-.shopping-cart__div {
-    width: 500px;
-    height: 200px;
-    background: white;
-    position: absolute;
-    right: 0;
-    margin-top: 20px;
-    /* display: inline-block; */
-}
-
-.cartIconWrap {
-    cursor: pointer;
-}
-
-.rightHeader {
-    position: relative;
-}
-
-.shopping-cart__div--head,
-.shopping-cart__div--goods {
-    display: flex;
-    margin: 10px 5px 10px 5px;
-    justify-content: space-around;
-    font-size: 15px;
-}
