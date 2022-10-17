@@ -34,6 +34,18 @@ function getProductMarkup(product) {
     `;
 }
 
+function addEventListenerForAddToCardButtons () {
+    const addToCartButtons = document.querySelectorAll('button[data-productId]');
+    addToCartButtons.forEach(function (button){
+        button.addEventListener('click', addedProductHandler);
+    });
+}
+
+function addedProductHandler(event) {
+    const productId = event.currentTarget.getAttribute('data-productId');
+    addProductIntoBasket(productId);
+}
+
 function insertProductIntoPage (products, featuredItemsEl) {
     let productsMarkup = '';
     for(let product of products) {
@@ -43,3 +55,4 @@ function insertProductIntoPage (products, featuredItemsEl) {
 };
 
 insertProductIntoPage(products, featuredItemsEl);
+addEventListenerForAddToCardButtons();
